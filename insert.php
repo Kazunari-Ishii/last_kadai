@@ -25,7 +25,7 @@ if ($status == false) {
     $error = $stmt->errorInfo();
     exit("QueryError:" . $error[2]);
 } else {
-    //５．select.phpへリダイレクト
-    header("Location: select.php");
+    //５．registration.phpへリダイレクト
+    header("Location: registration.php");
     exit;
 }

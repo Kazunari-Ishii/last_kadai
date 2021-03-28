@@ -51,13 +51,13 @@
                 </form>
             </div>
             <div>
-                <img class="sermon" src="img/il04a-500.png" alt="" style="display: none;">
-                <img class="sermon2" src="img/il04a-500.png" alt="" style="display: none;">
-                <img class="sermon3" src="img/il04a-500.png" alt="" style="display: none;">
-                <img class="sermon4" src="img/il04a-500.png" alt="" style="display: none;">
-                <img class="sermon5" src="img/il04a-500.png" alt="" style="display: none;">
-                <img class="orca" src="img/il06a-500.png" alt="" style="display: none;">
-                <img class="bear" src="img/il09.png" alt="" style="display: none;">
+                <img class="flower" src="img/1.png" alt="" style="display: none;">
+                <img class="flower2" src="img/1.png" alt="" style="display: none;">
+                <img class="flower3" src="img/1.png" alt="" style="display: none;">
+                <img class="flower4" src="img/1.png" alt="" style="display: none;">
+                <img class="flower5" src="img/1.png" alt="" style="display: none;">
+                <img class="flower6" src="img/2.png" alt="" style="display: none;">
+                <img class="flower7" src="img/3.png" alt="" style="display: none;">
             </div>
         </div>
     </main>
