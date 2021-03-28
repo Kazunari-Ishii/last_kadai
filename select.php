@@ -1,5 +1,5 @@
 <?php
-//1.  DB接続します xxxにDB名を入れます
+//1.  DB接続
 try {
   $pdo = new PDO('mysql:dbname=c_db;charset=utf8;host=localhost', 'root', 'root');
 } catch (PDOException $e) {
@@ -7,7 +7,6 @@ try {
 }
 
 //２．データ登録SQL作成
-//作ったテーブル名を書く場所  xxxにテーブル名を入れます
 $stmt = $pdo->prepare("SELECT * FROM c_table");
 $status = $stmt->execute();
 
@@ -18,13 +17,12 @@ if ($status == false) {
   $error = $stmt->errorInfo();
   exit("ErrorQuery:" . $error[2]);
 } else {
-  //Selectデータの数だけ自動でループしてくれる $resultの中に「カラム名」が入ってくるのでそれを表示させる例
   while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $view .= '<div class="f-item1">';
     $view .= $result["id"];
     $view .= '</div>';
     $view2 .= '<div class="f-item2">';
-    $view2 .= $result["word"];
+    $view2 .= $result["part_of_speech"] . ":" . $result["word"];
     $view2 .= '</div>';
     $view3 .= '<div class="f-item2">';
     $view3 .= $result["meaning"];
@@ -47,6 +45,7 @@ if ($status == false) {
   <link rel='stylesheet' href='css/reset.css'>
   <link rel='stylesheet' href='css/style2.css'>
   <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body id="main">
@@ -66,21 +65,50 @@ if ($status == false) {
 
   <!-- Main[Start] $view-->
   <div class="f-container">
+    <button id="hide" style="width:100px;height:50px;cursor:pointer">言葉を隠す</button>
+    <button id="show" style="width:100px;height:50px;cursor:pointer">言葉を表示</button>
+    <button id="hide2" style="width:100px;height:50px;cursor:pointer">意味を隠す</button>
+    <button id="show2" style="width:100px;height:50px;cursor:pointer">意味を表示</button>
+  </div>
+
+  <div class="f-container">
     <div>
       <div><?= $view ?></div>
     </div>
     <div>
-      <div><?= $view2 ?></div>
+      <div id="output"><?= $view2 ?></div>
     </div>
     <div>
-      <div><?= $view3 ?></div>
+      <div id="output2"><?= $view3 ?></div>
     </div>
     <div>
       <div><?= $view4 ?></div>
     </div>
   </div>
-  <!-- Main[End] -->
 
+  <button id="delete" style="width:100px;height:50px;cursor:pointer">削除</button>
+
+  <!-- Main[End] -->
+  <script>
+    // 隠したり、表示したりするボタン
+    $("#hide").on("click", function() {
+      $("#output").hide();
+    })
+    $("#show").on("click", function() {
+      $("#output").show();
+    })
+    $("#hide2").on("click", function() {
+      $("#output2").hide();
+    })
+    $("#show2").on("click", function() {
+      $("#output2").show();
+    })
+
+    $("#delete").on("click", function() {
+      $("#output").empty();
+      $("#output2").empty();
+    })
+  </script>
 </body>
 
 </html>

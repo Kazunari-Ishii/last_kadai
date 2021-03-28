@@ -9,6 +9,7 @@
     <link rel='stylesheet' href='css/reset.css'>
     <link rel='stylesheet' href='css/style3.css'>
     <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -23,29 +24,42 @@
     </header>
 
     <main>
-        <form method="post" action="insert.php">
-            <div class="jumbotron">
-                <fieldset>
-                    <legend>ここに言葉と意味を入力して下さい。</legend><br>
-                    <label>品詞：<select name="part_of_speech">
-                            <option value="" selected>品詞</option>
-                            <option value="名詞">名詞</option>
-                            <option value="代名詞">代名詞</option>
-                            <option value="動詞">動詞</option>
-                            <option value="形容詞">形容詞</option>
-                            <option value="副詞">副詞</option>
-                            <option value="助動詞">助動詞</option>
-                            <option value="前置詞">前置詞</option>
-                            <option value="冠詞">冠詞</option>
-                            <option value="接続詞">接続詞</option>
-                            <option value="間投詞">間投詞</option>
-                        </select><br><br>
-                        <label>単語：<input type="text" name="word" value=""></label><br><br>
-                        <label>意味：<textArea name="meaning" rows="4" cols="40"></textArea></label><br><br>
-                        <input id="button1" type="submit" value="登録">
-                </fieldset>
+        <div class="f-container">
+            <div>
+                <form method="post" action="insert.php">
+                    <div class="jumbotron">
+                        <fieldset>
+                            <legend>ここに言葉と意味を入力して下さい。</legend><br>
+                            <label>品詞：<select name="part_of_speech">
+                                    <option value="" selected>品詞</option>
+                                    <option value="名詞">名詞</option>
+                                    <option value="代名詞">代名詞</option>
+                                    <option value="動詞">動詞</option>
+                                    <option value="形容詞">形容詞</option>
+                                    <option value="副詞">副詞</option>
+                                    <option value="助動詞">助動詞</option>
+                                    <option value="前置詞">前置詞</option>
+                                    <option value="冠詞">冠詞</option>
+                                    <option value="接続詞">接続詞</option>
+                                    <option value="間投詞">間投詞</option>
+                                </select><br><br>
+                                <label>単語：<input type="text" name="word" value=""></label><br><br>
+                                <label>意味：<textArea name="meaning" rows="4" cols="40"></textArea></label><br><br>
+                                <input id="button1" type="submit" value="登録">
+                        </fieldset>
+                    </div>
+                </form>
             </div>
-        </form>
+            <div>
+                <img class="sermon" src="img/il04a-500.png" alt="" style="display: none;">
+                <img class="sermon2" src="img/il04a-500.png" alt="" style="display: none;">
+                <img class="sermon3" src="img/il04a-500.png" alt="" style="display: none;">
+                <img class="sermon4" src="img/il04a-500.png" alt="" style="display: none;">
+                <img class="sermon5" src="img/il04a-500.png" alt="" style="display: none;">
+                <img class="orca" src="img/il06a-500.png" alt="" style="display: none;">
+                <img class="bear" src="img/il09.png" alt="" style="display: none;">
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -61,6 +75,48 @@
         </header>
     </footer>
 
+    <script>
+        //スタンプが増える仕組み
+        let i = 0;
+
+        $("#button1").on("click", function() {
+            i++;
+            if (i == 1) {
+                $(".sermon").fadeIn();
+            } else if (i == 2) {
+                $(".sermon2").fadeIn();
+            } else if (i == 3) {
+                $(".sermon3").fadeIn();
+            } else if (i == 4) {
+                $(".sermon4").fadeIn();
+            } else if (i == 5) {
+                $(".sermon5").fadeIn();
+                $(".sermon").fadeOut();
+                $(".sermon2").fadeOut();
+                $(".sermon3").fadeOut();
+                $(".sermon4").fadeOut();
+                $(".sermon5").fadeOut();
+                $(".orca").fadeIn(2000);
+            } else if (i == 6) {
+                $(".sermon").fadeIn();
+            } else if (i == 7) {
+                $(".sermon2").fadeIn();
+            } else if (i == 8) {
+                $(".sermon3").fadeIn();
+            } else if (i == 9) {
+                $(".sermon4").fadeIn();
+            } else if (i == 10) {
+                $(".sermon5").fadeIn();
+                $(".sermon").fadeOut();
+                $(".sermon2").fadeOut();
+                $(".sermon3").fadeOut();
+                $(".sermon4").fadeOut();
+                $(".sermon5").fadeOut();
+                $(".orca").fadeOut();
+                $(".bear").fadeIn(2000);
+            }
+        });
+    </script>
 
 </body>
 

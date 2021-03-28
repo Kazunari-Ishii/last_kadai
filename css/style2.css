@@ -29,24 +29,56 @@ main {
   justify-content: space-around;
 }
 .f-item1 {
-  font: 25px/25px sans-serif;
+  font: 20px/20px sans-serif;
   box-sizing: border-box;
-  width: 150%;
+  width: 100%;
   letter-spacing: 1px;
   color: black;
   margin: 1em;
-  padding: 1em 0em;
+  padding: 0.5em;
 }
 
 .f-item2 {
   background-color: blanchedalmond;
-  font: 25px/25px sans-serif;
+  font: 20px/20px sans-serif;
   box-sizing: border-box;
-  width: 150%;
+  width: 100%;
   letter-spacing: 1px;
   color: black;
   border: 5px solid #1b2538;
   border-radius: 4px;
   margin: 1em;
-  padding: 1em 0em;
+  padding: 0.5em;
+}
+
+#hide,
+#show,
+#hide2,
+#show2 {
+  width: fit-content;
+  height: fit-content;
+  line-height: 30px;
+  border: 1px solid silver;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: gray 3px 3px;
+  cursor: pointer;
+  background-color: lightyellow;
+}
+
+#delete {
+  width: fit-content;
+  height: fit-content;
+  line-height: 30px;
+  border: 1px solid silver;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: antiquewhite;
+  box-shadow: gray 3px 3px;
+  cursor: pointer;
+  background-color: red;
 }
