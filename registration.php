@@ -1,3 +1,9 @@
+<?php
+session_start();
+include("funcs.php");
+loginCheck();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -68,7 +74,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="select.php">単語帳へ</a>
-                        <a class="navbar-brand" href="index.php">ログアウト</a>
+                        <a class="navbar-brand" href="logout.php">ログアウト</a>
                     </div>
                 </div>
             </nav>

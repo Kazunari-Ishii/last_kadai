@@ -1,19 +1,14 @@
 <?php
-//1.  DB接続
-try {
-  $pdo = new PDO('mysql:dbname=c_db;charset=utf8;host=localhost', 'root', 'root');
-} catch (PDOException $e) {
-  exit('データベースに接続できませんでした。' . $e->getMessage());
-}
+session_start();
+include("funcs.php");
+loginCheck();
+$pdo = db_connect();
 
-//２．データ登録SQL作成
 $stmt = $pdo->prepare("SELECT * FROM c_table");
 $status = $stmt->execute();
 
-//３．データ表示
 $view = "";
 if ($status == false) {
-  //execute（SQL実行時にエラーがある場合）
   $error = $stmt->errorInfo();
   exit("ErrorQuery:" . $error[2]);
 } else {
@@ -56,7 +51,7 @@ if ($status == false) {
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="registration.php">登録画面へ</a>
-          <a class="navbar-brand" href="index.php">ログアウト</a>
+          <a class="navbar-brand" href="logout.php">ログアウト</a>
         </div>
       </div>
     </nav>
