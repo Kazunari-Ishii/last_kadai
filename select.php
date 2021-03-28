@@ -43,7 +43,7 @@ if ($status == false) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>単語帳アプリ　確認画面</title>
+  <title>単語帳アプリ　単語帳画面</title>
   <link rel='stylesheet' href='css/reset.css'>
   <link rel='stylesheet' href='css/style2.css'>
   <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
@@ -52,6 +52,7 @@ if ($status == false) {
 <body id="main">
   <!-- Head[Start] -->
   <header>
+    <h1>単語帳</h1>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
