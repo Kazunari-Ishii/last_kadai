@@ -26,7 +26,7 @@ loginCheck();
                 <div class="navbar-header"><a class="navbar-brand" href="select.php"></a></div>
             </div>
         </nav>
-        <h1>登録画面</h1>
+        <h1>登録</h1>
     </header>
 
     <main>
@@ -49,7 +49,7 @@ loginCheck();
                                     <option value="接続詞">接続詞</option>
                                     <option value="間投詞">間投詞</option>
                                 </select><br><br>
-                                <label>単語：<input type="text" name="word" value=""></label><br><br>
+                                <label>言葉：<input type="text" name="word" value=""></label><br><br>
                                 <label>意味：<textArea name="meaning" rows="4" cols="40"></textArea></label><br><br>
                                 <input id="button1" type="submit" value="登録">
                         </fieldset>
