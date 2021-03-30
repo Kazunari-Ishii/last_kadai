@@ -37,3 +37,7 @@ main {
   cursor: pointer;
   background-color: pink;
 }
+
+span {
+  color: red;
+}

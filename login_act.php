@@ -3,6 +3,15 @@ session_start();
 include("funcs.php");
 $pdo = db_connect();
 
+if (strlen($_POST['lid']) > 10 || strlen($_POST['lpw']) > 10) {
+  echo "文字数がオーバーしています。";
+  header("Location: validate_b.php");
+  exit;
+} elseif (empty($_POST['lid']) || empty($_POST['lpw'])) {
+  header("Location: validate_c.php");
+  exit;
+}
+
 $lid = $_POST["lid"];
 $lpw = $_POST["lpw"];
 
@@ -24,6 +33,6 @@ if ($val["id"] != "") {
   $_SESSION["u_name"] = $val['u_name'];
   header("Location: select.php");
 } else {
-  header("Location: index.php");
+  header("Location: validate_a.php");
 }
 exit();
