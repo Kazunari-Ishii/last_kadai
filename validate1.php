@@ -48,7 +48,7 @@ loginCheck();
                                     <option value="接続詞">接続詞</option>
                                     <option value="間投詞">間投詞</option>
                                 </select><br><br>
-                                <label>単語：<input type="text" name="word" value=""></label><br><br>
+                                <label>言葉：<input type="text" name="word" value=""></label><br><br>
                                 <label>意味：<textArea name="meaning" rows="4" cols="40"></textArea></label><br><br>
                                 <p><span>※未入力の項目があります！</span></p>
                                 <input id="button1" type="submit" value="登録">
