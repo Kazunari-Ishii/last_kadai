@@ -21,9 +21,9 @@
                 <form method="post" action="login_act.php">
                     <div class="jumbotron">
                         <fieldset>
-                            <label>ID：<input type="text" name="lid"></label><br>
-                            <label>PW：<input type="password" name="lpw"></label><br>
-                            <p><span>未入力の項目があります！</span></p>
+                            <label>ID：<input type="text" name="lid" autocomplete="off"></label><br>
+                            <label>PW：<input type="password" name="lpw" autocomplete="off"></label><br>
+                            <p><span>※未入力の項目があります！</span></p>
                             <input id="button1" type="submit" value="ログイン">
                         </fieldset>
                     </div>

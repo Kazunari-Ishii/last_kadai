@@ -14,7 +14,9 @@ if ($status == false) {
 } else {
   while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $view .= '<div class="f-item1">';
+    $view .= '<a href="u_view.php?id=' . $result["id"] . '">';
     $view .= $result["id"];
+    $view .= '</a>';
     $view .= '</div>';
     $view2 .= '<div class="f-item2">';
     $view2 .= $result["part_of_speech"] . ":" . $result["word"];

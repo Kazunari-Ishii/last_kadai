@@ -4,8 +4,7 @@ include("funcs.php");
 $pdo = db_connect();
 
 if (strlen($_POST['lid']) > 10 || strlen($_POST['lpw']) > 10) {
-  echo "文字数がオーバーしています。";
-  header("Location: validate_b.php");
+  header('Location: validate_b.php');
   exit;
 } elseif (empty($_POST['lid']) || empty($_POST['lpw'])) {
   header("Location: validate_c.php");
