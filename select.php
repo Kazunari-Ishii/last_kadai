@@ -25,7 +25,9 @@ if ($status == false) {
     $view3 .= $result["meaning"];
     $view3 .= '</div>';
     $view4 .= '<div class="f-item1">';
-    $view4 .= $result["indate"];
+    $view4 .= '<a href="delete.php?id=' . $result["id"] . '">';
+    $view4 .= '[削除]';
+    $view4 .= '</a>';
     $view4 .= '</div>';
   }
 }
@@ -83,8 +85,6 @@ if ($status == false) {
     </div>
   </div>
 
-  <button id="delete" style="width:100px;height:50px;cursor:pointer">削除</button>
-
   <!-- Main[End] -->
   <script>
     // 隠したり、表示したりするボタン
@@ -99,11 +99,6 @@ if ($status == false) {
     })
     $("#show2").on("click", function() {
       $("#output2").show();
-    })
-
-    $("#delete").on("click", function() {
-      $("#output").empty();
-      $("#output2").empty();
     })
   </script>
 </body>

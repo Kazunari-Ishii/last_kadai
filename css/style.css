@@ -41,6 +41,7 @@ footer {
 }
 
 #button1 {
+  margin: 1em;
   width: fit-content;
   height: fit-content;
   line-height: 30px;
