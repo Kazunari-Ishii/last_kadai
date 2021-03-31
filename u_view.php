@@ -38,7 +38,6 @@ if ($status == false) {
   <title>単語帳アプリ　更新画面</title>
   <link rel='stylesheet' href='css/reset.css'>
   <link rel='stylesheet' href='css/style3.css'>
-  <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
@@ -59,7 +58,7 @@ if ($status == false) {
         <form method="post" action="update.php">
           <div class="jumbotron">
             <fieldset>
-              <legend>言葉と意味を変更して下さい。</legend><br>
+              <legend>変更したい項目を修正してください。</legend><br>
               <label>品詞：<select name="part_of_speech">
                   <option value="<?= $row["part_of_speech"] ?>" selected><?= $row["part_of_speech"] ?></option>
                   <option value="名詞">名詞</option>

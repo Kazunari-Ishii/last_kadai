@@ -43,7 +43,6 @@ if ($status == false) {
   <title>単語帳アプリ　単語帳画面</title>
   <link rel='stylesheet' href='css/reset.css'>
   <link rel='stylesheet' href='css/style2.css'>
-  <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 

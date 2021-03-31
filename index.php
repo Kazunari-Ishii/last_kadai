@@ -7,7 +7,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='css/reset.css'>
     <link rel='stylesheet' href='css/style.css'>
-    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
     <title>単語帳アプリ ログイン画面</title>
 </head>
 

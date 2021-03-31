@@ -14,7 +14,6 @@ loginCheck();
     <title>単語帳アプリ　登録画面</title>
     <link rel='stylesheet' href='css/reset.css'>
     <link rel='stylesheet' href='css/style3.css'>
-    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 

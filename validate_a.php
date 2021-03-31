@@ -7,7 +7,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='css/reset.css'>
     <link rel='stylesheet' href='css/style.css'>
-    <link rel="stylesheet" type="text/css" href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
     <title>単語帳アプリ ログイン失敗</title>
 </head>
 
@@ -22,7 +21,7 @@
                     <div class="jumbotron">
                         <fieldset>
                             <input type="text" name="lid" placeholder="Username" autocomplete="off"><br>
-                            <input type="password" name="lpw" placeholder="Password" autocomplete="off"><br>
+                            <input type="password" name="lpw" placeholder="Password" autocomplete="off"><br><br>
                             <p><span>※IDかパスワードが間違っています！</span></p>
                             <input id="button1" type="submit" value="Sign in">
                         </fieldset>
