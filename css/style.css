@@ -2,7 +2,7 @@ body {
   text-align: center;
   margin: 0.5em;
   padding: 0.5em;
-  background-image: url(../img/5.jpg);
+  background-image: url(../img/1.png);
   background-size: cover;
   font-family: "M+ Type-1 (general-j) Black";
 }
@@ -10,8 +10,8 @@ body {
 header {
   margin: 100px 200px;
   padding: 10px;
-  background-image: url(../img/6.png);
-  border: 10px ridge brown;
+  background-color: cadetblue;
+  border: 10px ridge blue;
   text-align: center;
   color: black;
   letter-spacing: 1em;
@@ -25,19 +25,7 @@ main {
   letter-spacing: 5px;
   font-size: 20px;
   border: 2px solid black;
-  background: khaki;
-}
-
-footer {
-  margin: 100px 200px;
-  padding: 0.5em;
-  background-image: url(../img/6.png);
-  border: 10px outset brown;
-  text-align: center;
-  color: black;
-  text-shadow: 2px 2px 2px white;
-  font-size: 26px;
-  font-family: "Courier New", Courier, monospace;
+  background: lightcyan;
 }
 
 #button1 {

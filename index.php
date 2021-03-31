@@ -21,9 +21,9 @@
                 <form method="post" action="login_act.php">
                     <div class="jumbotron">
                         <fieldset>
-                            <label>ID：<input type="text" name="lid" autocomplete="off"></label><br>
-                            <label>PW：<input type="password" name="lpw" autocomplete="off"></label><br>
-                            <input id="button1" type="submit" value="ログイン">
+                            <input type="text" name="lid" placeholder="Username" autocomplete="off"><br>
+                            <input type="password" name="lpw" placeholder="Password" autocomplete="off"><br>
+                            <input id="button1" type="submit" value="Sign in">
                         </fieldset>
                     </div>
                 </form>
@@ -31,7 +31,6 @@
         </div>
     </main>
 
-    <footer></footer>
 </body>
 
 </html>

@@ -59,7 +59,7 @@ if ($status == false) {
         <form method="post" action="update.php">
           <div class="jumbotron">
             <fieldset>
-              <legend>ここに言葉と意味を入力して下さい。</legend><br>
+              <legend>言葉と意味を変更して下さい。</legend><br>
               <label>品詞：<select name="part_of_speech">
                   <option value="<?= $row["part_of_speech"] ?>" selected><?= $row["part_of_speech"] ?></option>
                   <option value="名詞">名詞</option>
