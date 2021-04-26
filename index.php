@@ -30,6 +30,16 @@
         </div>
     </main>
 
+    <footer>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="member_register.php">会員登録</a>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
 </body>
 
 </html>
