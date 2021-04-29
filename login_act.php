@@ -3,11 +3,16 @@ session_start();
 include("funcs.php");
 $pdo = db_connect();
 
+unset($_SESSION['flg']);
+unset($_SESSION['flg2']);
+
 if (strlen($_POST['lid']) > 10 || strlen($_POST['lpw']) > 10) {
-  header('Location: validate_b.php');
+  $_SESSION['flg'] = "aaa";
+  header('Location: index.php');
   exit;
 } elseif (empty($_POST['lid']) || empty($_POST['lpw'])) {
-  header("Location: validate_c.php");
+  $_SESSION['flg2'] = "bbb";
+  header("Location: index.php");
   exit;
 }
 
@@ -32,6 +37,6 @@ if ($val["id"] != "") {
   $_SESSION["u_name"] = $val['u_name'];
   header("Location: select.php");
 } else {
-  header("Location: validate_a.php");
+  header('Location: index.php');
 }
 exit();
