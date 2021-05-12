@@ -50,6 +50,12 @@ loginCheck();
                                 </select><br><br>
                                 <label>言葉：<input type="text" name="word" value=""></label><br><br>
                                 <label>意味：<textArea name="meaning" rows="4" cols="40"></textArea></label><br><br>
+                                <span>
+                                    <?php
+                                    session_start();
+                                    echo $_SESSION['flg'];
+                                    ?>
+                                </span><br><br>
                                 <input id="button1" type="submit" value="登録">
                         </fieldset>
                     </div>

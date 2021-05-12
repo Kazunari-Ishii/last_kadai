@@ -36,7 +36,15 @@ include("funcs.php");
                             <legend>ここに名前とIDとパスワードを入力して下さい。</legend><br>
                             <label>名前：<input type="text" name="una" value=""></label><br><br>
                             <label>ID：<input type="text" name="lid" value=""></label><br><br>
-                            <label>パスワード：<input type="text" name="lpw" value=""></label>
+                            <label>パスワード：<input type="text" name="lpw" value=""></label><br><br>
+                            <span>
+                                <?php
+                                session_start();
+                                echo $_SESSION['flg'];
+                                echo $_SESSION['flg2'];
+                                echo $_SESSION['flg3'];
+                                ?>
+                            </span><br>
                             <input id="button1" type="submit" value="登録">
                         </fieldset>
                     </div>

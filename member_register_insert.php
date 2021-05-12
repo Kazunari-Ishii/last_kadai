@@ -3,6 +3,19 @@ session_start();
 include("funcs.php");
 $pdo = db_connect();
 
+unset($_SESSION['flg']);
+unset($_SESSION['flg2']);
+
+if (empty($_POST['lid']) || empty($_POST['lpw'])) {
+    $_SESSION['flg'] = "必須項目が未入力です。";
+    header('Location: member_register.php');
+    exit;
+} elseif (strlen($_POST['lid']) > 10 || strlen($_POST['lpw']) > 10) {
+    $_SESSION['flg2'] = "10文字以内で入力して下さい。";
+    header("Location: member_register.php");
+    exit;
+}
+
 $una = $_POST["una"];
 $lid = $_POST["lid"];
 $lpw = $_POST["lpw"];

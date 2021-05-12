@@ -3,6 +3,15 @@ session_start();
 include("funcs.php");
 $pdo = db_connect();
 
+unset($_SESSION['flg']);
+unset($_SESSION['flg2']);
+
+if (empty($_POST['part_of_speech']) || empty($_POST['word']) || empty($_POST['meaning'])) {
+    $_SESSION['flg'] = "必須項目が未入力です。";
+    header('Location: registration.php');
+    exit;
+}
+
 $part_of_speech = $_POST["part_of_speech"];
 $word = $_POST["word"];
 $meaning = $_POST["meaning"];

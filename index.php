@@ -21,12 +21,15 @@
                     <div class="jumbotron">
                         <fieldset>
                             <input type="text" name="lid" placeholder="Username" autocomplete="off"><br>
-                            <input type="password" name="lpw" placeholder="Password" autocomplete="off"><br>
-                            <?php
-                            session_start();
-                            echo $_SESSION['flg'];
-                            echo $_SESSION['flg2'];
-                            ?><br>
+                            <input type="password" name="lpw" placeholder="Password" autocomplete="off"><br><br>
+                            <span>
+                                <?php
+                                session_start();
+                                echo $_SESSION['flg'];
+                                echo $_SESSION['flg2'];
+                                echo $_SESSION['flg3'];
+                                ?>
+                            </span><br>
                             <input id="button1" type="submit" value="Sign in">
                         </fieldset>
                     </div>

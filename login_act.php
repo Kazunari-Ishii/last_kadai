@@ -5,13 +5,14 @@ $pdo = db_connect();
 
 unset($_SESSION['flg']);
 unset($_SESSION['flg2']);
+unset($_SESSION['flg3']);
 
-if (strlen($_POST['lid']) > 10 || strlen($_POST['lpw']) > 10) {
-  $_SESSION['flg'] = "aaa";
+if (empty($_POST['lid']) || empty($_POST['lpw'])) {
+  $_SESSION['flg'] = "必須項目が未入力です。";
   header('Location: index.php');
   exit;
-} elseif (empty($_POST['lid']) || empty($_POST['lpw'])) {
-  $_SESSION['flg2'] = "bbb";
+} elseif (strlen($_POST['lid']) > 10 || strlen($_POST['lpw']) > 10) {
+  $_SESSION['flg2'] = "10文字以内で入力して下さい。";
   header("Location: index.php");
   exit;
 }
@@ -37,6 +38,7 @@ if ($val["id"] != "") {
   $_SESSION["u_name"] = $val['u_name'];
   header("Location: select.php");
 } else {
+  $_SESSION['flg3'] = "IDかパスワードが間違っています！";
   header('Location: index.php');
 }
 exit();
